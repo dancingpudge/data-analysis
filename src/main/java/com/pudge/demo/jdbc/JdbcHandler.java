@@ -7,9 +7,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/**
+ * @author liuhu
+ */
 public class JdbcHandler {
     /**
-     * 查找未支付完的订单信息
      *
      * @return
      */

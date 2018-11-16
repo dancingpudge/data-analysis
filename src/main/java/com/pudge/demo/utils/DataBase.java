@@ -4,6 +4,9 @@ import java.io.InputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+/**
+ * @author liuhu
+ */
 public class DataBase {
     private static String url;
     private static String driver;
