@@ -1,4 +1,4 @@
-package com.joyowo.exchange.utils;
+package com.pudge.demo.utils;
 
 import java.io.InputStream;
 import java.io.IOException;

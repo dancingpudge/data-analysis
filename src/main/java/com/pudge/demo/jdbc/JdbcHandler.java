@@ -1,6 +1,6 @@
-package com.joyowo.exchange.jdbc;
+package com.pudge.demo.jdbc;
 
-import com.joyowo.exchange.utils.DataBase;
+import com.pudge.demo.utils.DataBase;
 
 import java.sql.DriverManager;
 import java.sql.ResultSet;

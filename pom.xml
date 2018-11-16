@@ -47,7 +47,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.joyowo.exchange.MainThread</mainClass>
+                            <mainClass>com.pudge.demo.MainThread</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
