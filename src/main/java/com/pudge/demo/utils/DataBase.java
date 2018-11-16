@@ -13,10 +13,6 @@ public class DataBase {
     private static String username;
     private static String password;
 
-    private static String url2;
-    private static String driver2;
-    private static String username2;
-    private static String password2;
     static {
         Properties prop = new Properties();
         InputStream in = DataBase.class.getResourceAsStream("/database.properties");
@@ -27,16 +23,9 @@ public class DataBase {
             username = prop.getProperty("jdbc.username").trim();
             password = prop.getProperty("jdbc.password").trim();
 
-            url2 = prop.getProperty("jdbc2.url").trim();
-            driver2 = prop.getProperty("jdbc2.driver").trim();
-            username2 = prop.getProperty("jdbc2.username").trim();
-            password2 = prop.getProperty("jdbc2.password").trim();
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    private DataBase() {
     }
 
     public static String getUrl() {
@@ -53,21 +42,5 @@ public class DataBase {
 
     public static String getPassword() {
         return password;
-    }
-
-    public static String getUrl2() {
-        return url2;
-    }
-
-    public static String getDriver2() {
-        return driver2;
-    }
-
-    public static String getUsername2() {
-        return username2;
-    }
-
-    public static String getPassword2() {
-        return password2;
     }
 }

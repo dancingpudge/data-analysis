@@ -20,10 +20,10 @@ public class JdbcHandler {
         java.sql.Connection con = null;
         Statement stmt = null;
         try {
-            Class.forName(DataBase.getDriver2());
-            String url = DataBase.getUrl2();
-            String username = DataBase.getUsername2();
-            String password = DataBase.getPassword2();
+            Class.forName(DataBase.getDriver());
+            String url = DataBase.getUrl();
+            String username = DataBase.getUsername();
+            String password = DataBase.getPassword();
             con = DriverManager.getConnection(url, username, password);
             stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);

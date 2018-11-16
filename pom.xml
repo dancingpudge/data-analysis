@@ -17,6 +17,18 @@
         </dependency>
     </dependencies>
 
+    <!--创建BUILD版本时的一些依赖库-->
+    <repositories>
+        <repository>
+            <id>firstparty</id>
+            <name>firstparty</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <build>
         <resources>
             <resource>
