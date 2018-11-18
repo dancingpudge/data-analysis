@@ -11,8 +11,13 @@ import java.sql.Statement;
  * @author liuhu
  */
 public class JdbcHandler {
+    DataBase dataBase;
+
+    public JdbcHandler() {
+        this.dataBase = new DataBase();
+    }
+
     /**
-     *
      * @return
      */
     public void findTransInfo(String sql) throws Exception {
@@ -20,11 +25,8 @@ public class JdbcHandler {
         java.sql.Connection con = null;
         Statement stmt = null;
         try {
-            Class.forName(DataBase.getDriver());
-            String url = DataBase.getUrl();
-            String username = DataBase.getUsername();
-            String password = DataBase.getPassword();
-            con = DriverManager.getConnection(url, username, password);
+            Class.forName(dataBase.driver);
+            con = DriverManager.getConnection(dataBase.url, dataBase.username, dataBase.password);
             stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
@@ -33,7 +35,6 @@ public class JdbcHandler {
                 rs.close();
             }
         } catch (Exception e) {
-            System.out.println("数据库连接失败！");
             e.printStackTrace();
             throw e;
         } finally {
@@ -47,24 +48,20 @@ public class JdbcHandler {
      *
      * @return boolean
      */
-    public boolean updateBySql(String sql) throws Exception {
+    public boolean executeSql(String sql) {
         java.sql.Connection con = null;
         Statement stmt = null;
         try {
-            Class.forName(DataBase.getDriver());
-            String url = DataBase.getUrl();
-            String username = DataBase.getUsername();
-            String password = DataBase.getPassword();
-            con = DriverManager.getConnection(url, username, password);
+            System.out.println("正在执行的AQL ===>" + sql);
+            con = DriverManager.getConnection(dataBase.url, dataBase.username, dataBase.password);
             stmt = con.createStatement();
-            return 1 == stmt.executeUpdate(sql);
+            return stmt.execute(sql);
         } catch (Exception e) {
-            System.out.println("数据库连接失败！");
             e.printStackTrace();
-            throw e;
         } finally {
             closeJdbc(con, stmt);
         }
+        return false;
     }
 
     /**

@@ -12,13 +12,13 @@ public class Student {
 
     private int classNum;
 
-    private int chinese;
+    private double chinese;
 
-    private int math;
+    private double math;
 
-    private int english;
+    private double english;
 
-    private int physics;
+    private double physics;
 
     public int getId() {
         return id;
@@ -60,35 +60,36 @@ public class Student {
         this.classNum = classNum;
     }
 
-    public int getChinese() {
+    public double getChinese() {
         return chinese;
     }
 
-    public void setChinese(int chinese) {
+    public void setChinese(double chinese) {
         this.chinese = chinese;
     }
 
-    public int getMath() {
+    public double getMath() {
         return math;
     }
 
-    public void setMath(int math) {
+    public void setMath(double math) {
         this.math = math;
     }
 
-    public int getEnglish() {
+    public double getEnglish() {
         return english;
     }
 
-    public void setEnglish(int english) {
+    public void setEnglish(double english) {
         this.english = english;
     }
 
-    public int getPhysics() {
+    public double getPhysics() {
         return physics;
     }
 
-    public void setPhysics(int physics) {
+    public void setPhysics(double physics) {
         this.physics = physics;
     }
+
 }
