@@ -15,6 +15,10 @@ public class StudentService {
         this.studentDao = new StudentDao();
     }
 
+    public void clean() {
+        studentDao.clean();
+    }
+
     public void batchInsert() {
         System.out.println("开始录入学生信息");
         for (int i = 0; i < 10; i++) {
@@ -42,4 +46,6 @@ public class StudentService {
         student.setPhysics(50 * Math.random() + 40);
         return student;
     }
+
+
 }

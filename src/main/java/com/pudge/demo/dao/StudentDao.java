@@ -20,4 +20,8 @@ public class StudentDao {
                         student.getChinese() + ", " + student.getMath() + ", " + student.getEnglish() + ", " + student.getPhysics()
                         + ");");
     }
+
+    public void clean() {
+        handler.executeSql("delete from student");
+    }
 }

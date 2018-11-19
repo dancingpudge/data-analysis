@@ -12,7 +12,6 @@ public class MainThread {
     public static void main(String[] arg) {
         studentService = new StudentService();
         initData();
-        createStudents();
         statistics();
     }
 
@@ -21,12 +20,9 @@ public class MainThread {
      * 数据初始化
      */
     private static void initData() {
-    }
-
-    /**
-     * 批量创建学生
-     */
-    private static void createStudents() {
+        //清除历史数据
+        studentService.clean();
+        //新建学员信息
         studentService.batchInsert();
     }
 
@@ -34,7 +30,8 @@ public class MainThread {
      * 统计--数据分析
      */
     private static void statistics() {
-        //
+        //取出各个科目成绩最高的人
+
     }
 }
 
