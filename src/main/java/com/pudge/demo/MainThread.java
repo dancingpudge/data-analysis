@@ -7,12 +7,14 @@ import com.pudge.demo.service.StudentService;
  * @author liuhu
  */
 public class MainThread {
+    private static StudentService studentService;
+
     public static void main(String[] arg) {
+        studentService = new StudentService();
         initData();
         createStudents();
         statistics();
     }
-
 
 
     /**
@@ -25,13 +27,14 @@ public class MainThread {
      * 批量创建学生
      */
     private static void createStudents() {
-     new StudentService().batchInsert();
+        studentService.batchInsert();
     }
 
     /**
      * 统计--数据分析
      */
     private static void statistics() {
+        //
     }
 }
 
