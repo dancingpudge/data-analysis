@@ -14,6 +14,7 @@ public class MainThread {
         initData();
         statistics();
         //测试代码冲突，分支注释
+        add2();
     }
 
 
@@ -34,6 +35,9 @@ public class MainThread {
         //取出各个科目成绩最高的人
         //分支的代码
     }
+    private static void add2() {
+    }
+
 }
 
 
