@@ -32,7 +32,7 @@ public class MainThread {
      */
     private static void statistics() {
         //取出各个科目成绩最高的人
-
+        //分支的代码
     }
 }
 
