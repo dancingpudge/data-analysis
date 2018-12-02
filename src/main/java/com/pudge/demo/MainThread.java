@@ -25,6 +25,7 @@ public class MainThread {
         studentService.clean();
         //新建学员信息
         studentService.batchInsert();
+        //主干内单独的代码
     }
 
     /**
