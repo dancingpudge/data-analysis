@@ -14,6 +14,7 @@ public class MainThread {
         initData();
         statistics();
         //测试代码冲突主干添加注释
+        add1();
     }
 
 
@@ -32,6 +33,11 @@ public class MainThread {
      * 统计--数据分析
      */
     private static void statistics() {
+        //取出各个科目成绩最高的人
+
+    }
+
+    private static void add1() {
         //取出各个科目成绩最高的人
 
     }
