@@ -13,6 +13,7 @@ public class MainThread {
         studentService = new StudentService();
         initData();
         statistics();
+        //测试代码冲突主干添加注释
     }
 
 
